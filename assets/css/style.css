@@ -275,8 +275,8 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right no-repeat;
-  background-size: cover;
+  background: url("../img/11669690_20943875.jpg") top right no-repeat;
+  background-size: contain;
   position: relative;
 }
 
@@ -288,7 +288,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -581,6 +581,7 @@ section {
   background: #0f1846;
   overflow: hidden;
   border: 1px solid rgb(0, 0, 0);
+  border-radius: 9px;
 
 }
 .facts .box-skils .box-cart .img1 img{
@@ -602,7 +603,7 @@ section {
 }
 .facts .box-skils .box-cart .content2 h1{
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 800;
   color: rgb(255, 255, 255);
   text-align: center;
 }
@@ -614,11 +615,25 @@ section {
   text-align: center;
   list-style: none;
 }
-
+.facts .box-skils .box-cart .content2 ul{
+  display: grid;
+  place-items: center;
+  justify-items: start;
+  justify-content: center;
+  align-items: center;
+}
+.facts .box-skils .box-cart .content2 ul li::before{
+position: absolute;
+content: '>>';
+color: gainsboro;
+left: 100px;
+    right: 0px;
+font-weight: 500;
+}
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
-.skills .progress {
+/* .skills .progress {
   height: 60px;
   display: block;
   background: none;
@@ -649,23 +664,29 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: #0563bb;
-}
+} */
 
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume{
+  background: #0f1846;
+}
+.resume .section-title p{
+  color: gainsboro;
+}
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #45505b;
+  color: #ffffff;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #0563bb;
+  border-left: 2px solid #ffffff;
   position: relative;
 }
 
@@ -675,25 +696,32 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #0563bb;
+  color: #c2c2c2;
   margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
-  font-size: 16px;
-  background: #f7f8f9;
+  font-size: 17px;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
 }
-
+.resume .resume-item h6 {
+  font-size: 16px;
+  background: #f7f8f9;
+  padding: 5px 15px;
+  display: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
 .resume .resume-item ul {
   padding-left: 20px;
 }
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+  color: #ffffff;
 }
 
 .resume .resume-item:last-child {
@@ -711,7 +739,49 @@ section {
   background: #fff;
   border: 2px solid #0563bb;
 }
-
+.year-of-experience>.prv-year{
+  position: relative;
+  top: 649px;
+  left: 40px;
+  color: white;
+}
+.year-of-experience>.present-year{
+  position: relative;
+  top: 336px;
+  left: 40px;
+  color: white;
+}
+.resume .resume-item  p em{
+  color: white;
+}
+.resume .resume-item h5{
+color: rgb(197, 197, 197);
+}
+@media only screen and (max-width: 750px){
+  .year-of-experience>.prv-year{
+    position: relative;
+    top: 0px;
+    visibility: hidden;
+    color: white;
+  }
+  .year-of-experience>.present-year{
+    position: relative;
+    top: 0px;
+    visibility: hidden;
+    color: white;
+  }
+  .resume .resume-item h6 {
+    font-size: 16px;
+    background: #f7f8f9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 45px;
+    position: relative;
+    top: 30px;
+    right: 217px;
+  }
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
