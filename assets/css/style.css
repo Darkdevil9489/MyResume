@@ -739,8 +739,10 @@ font-weight: 500;
 @media only screen and (max-width: 750px){
   .facts .box-skils .box-cart{
     margin-left: 30%;
-  
   }
+  .facts .box-skils .box-cart .content2 ul li::before{
+    left: -18px;
+    }
 }
 /*--------------------------------------------------------------
 # Akills
