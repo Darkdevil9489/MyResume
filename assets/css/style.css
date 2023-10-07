@@ -288,7 +288,7 @@ h6 {
 
 #hero:before {
   content: "";
-  /* background: rgba(255, 255, 255, 0.8); */
+  background: rgba(255, 255, 255, 0.8); 
   position: absolute;
   bottom: 0;
   top: 0;
@@ -331,6 +331,109 @@ h6 {
 
 #hero .social-links a:hover {
   color: #0563bb;
+}
+
+#hero .resume-btn a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 40px 0;
+    color: #100a61;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+#hero .resume-btn a:hover{
+  background: #0f1846;
+    color: #ffff;
+    /* box-shadow: 0 0 5px #0f1846,
+                0 0 25px #0f1846,
+                0 0 50px #0f1846,
+                0 0 200px #0f1846; */
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+#hero .resume-btn a:nth-child(1){
+  filter: hue-rotate(270deg);
+}
+#hero .resume-btn a:nth-child(2){
+  filter: hue-rotate(110deg);
+}
+#hero .resume-btn a span{
+  position: absolute;
+  display: block;
+}
+#hero .resume-btn a span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#0f1846);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+}
+#hero .resume-btn a span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#0f1846);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+#hero .resume-btn a span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#0f1846);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+#hero .resume-btn a span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#0f1846);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -527,6 +630,9 @@ section {
 }
 .about .content p{
   color: #ffff;
+}
+.about h2{
+  color: #e9e9f7;
 }
 /*--------------------------------------------------------------
 # Facts
@@ -741,13 +847,13 @@ font-weight: 500;
 }
 .year-of-experience>.prv-year{
   position: relative;
-  top: 649px;
+  top: 600px;
   left: 40px;
   color: white;
 }
 .year-of-experience>.present-year{
   position: relative;
-  top: 336px;
+  top: 260px;
   left: 40px;
   color: white;
 }
@@ -756,6 +862,9 @@ font-weight: 500;
 }
 .resume .resume-item h5{
 color: rgb(197, 197, 197);
+}
+.resume h2{
+  color: #ffff;
 }
 @media only screen and (max-width: 750px){
   .year-of-experience>.prv-year{
@@ -1009,11 +1118,13 @@ color: rgb(197, 197, 197);
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  width:400px;
+  width:350px;
+  height: 390px;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  border-radius:10px;
+  box-shadow: 0px 5px 90px 0px rgba(218, 218, 218, 0.05);
 }
 
 .services .icon-box .icon {
@@ -1067,7 +1178,7 @@ color: rgb(197, 197, 197);
 }
 
 .services .iconbox-blue i {
-  color: #47aeff;
+  color: #0f1846;
 }
 
 .services .iconbox-blue:hover .icon i {
@@ -1075,11 +1186,11 @@ color: rgb(197, 197, 197);
 }
 
 .services .iconbox-blue:hover .icon path {
-  fill: #47aeff;
+  fill: #0f1846;
 }
 
 .services .iconbox-orange i {
-  color: #ffa76e;
+  color: #0f1846;
 }
 
 .services .iconbox-orange:hover .icon i {
@@ -1087,11 +1198,11 @@ color: rgb(197, 197, 197);
 }
 
 .services .iconbox-orange:hover .icon path {
-  fill: #ffa76e;
+  fill: #0f1846;
 }
 
 .services .iconbox-pink i {
-  color: #e80368;
+  color: #0f1846;
 }
 
 .services .iconbox-pink:hover .icon i {
@@ -1099,11 +1210,11 @@ color: rgb(197, 197, 197);
 }
 
 .services .iconbox-pink:hover .icon path {
-  fill: #e80368;
+  fill: #0f1846;
 }
 
 .services .iconbox-yellow i {
-  color: #ffbb2c;
+  color: #0f1846;
 }
 
 .services .iconbox-yellow:hover .icon i {
@@ -1111,11 +1222,11 @@ color: rgb(197, 197, 197);
 }
 
 .services .iconbox-yellow:hover .icon path {
-  fill: #ffbb2c;
+  fill: #0f1846;
 }
 
 .services .iconbox-red i {
-  color: #ff5828;
+  color: #0f1846;
 }
 
 .services .iconbox-red:hover .icon i {
@@ -1123,11 +1234,11 @@ color: rgb(197, 197, 197);
 }
 
 .services .iconbox-red:hover .icon path {
-  fill: #ff5828;
+  fill: #0f1846;
 }
 
 .services .iconbox-teal i {
-  color: #11dbcf;
+  color: #0f1846;
 }
 
 .services .iconbox-teal:hover .icon i {
@@ -1135,8 +1246,37 @@ color: rgb(197, 197, 197);
 }
 
 .services .iconbox-teal:hover .icon path {
-  fill: #11dbcf;
+  fill: #0f1846;
 }
+.services ul{
+  display: grid;
+    place-items: center;
+    justify-items: start;
+    justify-content: center;
+    align-items: center;
+}
+.services li{
+  list-style: none;
+}
+.services{
+  background: #0f1846;
+}
+.services h2{
+  color: #ffff;
+}
+.services p{
+  color: rgb(218, 218, 218);
+}
+/* .services li::before{
+  content: ">_";
+  left: 93px;
+  position: absolute;
+}
+.services li::before .icon-box:hover{
+  content: ">";
+  left: 88px;
+  position: absolute;
+} */
 
 /*--------------------------------------------------------------
 # Testimonials
