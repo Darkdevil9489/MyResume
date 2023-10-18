@@ -436,7 +436,11 @@ h6 {
       bottom: 100%;
   }
 }
-
+@media only screen and (max-width: 750px){
+  #hero .resume-btn a{
+margin-right: 0px;
+  }
+}
 @media (max-width: 992px) {
   #hero {
     text-align: center;
@@ -541,6 +545,7 @@ h6 {
 .content1 a:hover {
   letter-spacing: 0.3em;
 }
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -717,7 +722,7 @@ section {
 .facts .box-skils .box-cart .content2 ul li{
   margin-top: 6px;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 600;
   color: rgb(252, 252, 252);
   text-align: center;
   list-style: none;
@@ -808,7 +813,7 @@ font-weight: 500;
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #c2c2c2;
